@@ -1,0 +1,5 @@
+# Unity generated #
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+*.sln
+.vs/
