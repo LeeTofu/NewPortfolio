@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Define : MonoBehaviour
 {
+    public enum SceneType
+    {
+        None,
+        Title,
+        Main,
+        InGame,
+    }
+
     public enum CharacterState
     {
         Idle,

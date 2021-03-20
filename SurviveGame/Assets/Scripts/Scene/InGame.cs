@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExSceneManager : Singleton<ExSceneManager>
+public class InGame : BaseScene
 {
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class ExSceneManager : Singleton<ExSceneManager>
         
     }
 
-    public override void InitManager()
+    public override void Clear()
     {
 
     }
