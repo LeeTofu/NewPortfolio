@@ -16,4 +16,18 @@ public class Define : MonoBehaviour
     {
         Idle,
     }
+
+    public enum SFXType
+    {
+        None,
+
+    }
+
+    public enum BGMType
+    {
+        None,
+        Title,
+        InGame,
+
+    }
 }
