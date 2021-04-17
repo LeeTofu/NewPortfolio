@@ -7,8 +7,6 @@ public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
     static T s_instance;
     static public T Instance { get { Init(); return s_instance; } }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         Init();
@@ -24,6 +22,8 @@ public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
 
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<T>();
+
+            if (s_instance == null) s_instance = go.AddComponent<T>();
 
             s_instance.InitManager();
         }

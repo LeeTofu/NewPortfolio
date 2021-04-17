@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class Title : BaseScene
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.anyKey)
+        {
+            SceneChangeManager.Instance.LoadScene(Define.SceneType.InGame);
+        }
     }
 
     public override void Clear()
     {
 
+    }
+
+    protected override void InitScene()
+    {
+        base.InitScene();
+
+        SceneChangeManager.Instance.m_currentScene = this;
+        m_sceneType = Define.SceneType.Title;
     }
 }
